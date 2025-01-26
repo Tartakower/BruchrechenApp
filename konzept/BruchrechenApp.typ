@@ -42,3 +42,24 @@ Briefcase wird über das Tool `pip` installiert.
 ```bash
 nutzer@rechnername:~/Projekte/BruchrechenApp$ pyhton3 -m pip install briefcase
 ```
+
+= Das Projekt für die Bruchrechen-App
+
+== Ein neues Projekt einrichten
+
+```bash
+(.venv) $ briefcase new
+```
+
+== Die App ausführen
+
+```bash
+(.venv) $ cd bruchrechenapp
+(.venv) $ briefcase dev
+```
+
+= Das Frontend
+
+== Die GUI-Bibliothek Toga
+
+== Die Beispielzeile

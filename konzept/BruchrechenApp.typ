@@ -40,7 +40,7 @@ Man öffne ein neues Terminal. Dort sollte vor den Angaben zu Nutzer, Rechnernam
 Briefcase wird über das Tool `pip` installiert.
 
 ```bash
-nutzer@rechnername:~/Projekte/BruchrechenApp$ pyhton3 -m pip install briefcase
+nutzer@rechnername:~/Projekte/BruchrechenApp$ python3 -m pip install briefcase
 ```
 
 = Das Projekt für die Bruchrechen-App

@@ -9,6 +9,7 @@
 #show: sprache
 #show: normaltext
 #show: ueberschriften
+#show link: underline
 
 = Vorbereitung
 
@@ -61,5 +62,7 @@ nutzer@rechnername:~/Projekte/BruchrechenApp$ python3 -m pip install briefcase
 = Das Frontend
 
 == Die GUI-Bibliothek Toga
+
+#link("https://toga.readthedocs.io/en/stable/")
 
 == Die Beispielzeile

@@ -1,12 +1,12 @@
 from enum import Enum
 
-from bruchrechenapp.src.model.bruch import Bruch
+from bruchrechenapp.bruch import Bruch
 
 class Operator(Enum):
     PLUS = "+"
     MINUS = "-"
     MULT = "*"
-    DIV = "/"
+    DIV = ":"
 
     def berechne(self, operand1: Bruch, operand2: Bruch) -> Bruch:
         if self == Operator.PLUS:

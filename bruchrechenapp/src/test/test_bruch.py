@@ -1,5 +1,5 @@
 import pytest
-from bruchrechenapp.src.model.bruch import Bruch
+from bruchrechenapp.src.bruchrechenapp.bruch import Bruch
 
 
 def test_constructor() -> None:

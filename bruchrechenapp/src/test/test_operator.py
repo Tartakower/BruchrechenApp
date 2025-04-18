@@ -1,6 +1,6 @@
 import pytest
-from bruchrechenapp.src.model.operator import Operator
-from bruchrechenapp.src.model.bruch import Bruch
+from bruchrechenapp.src.bruchrechenapp.operator import Operator
+from bruchrechenapp.src.bruchrechenapp.bruch import Bruch
 
 def test_operator_plus():
     operand1 = Bruch(1, 2)
@@ -36,4 +36,4 @@ def test_operator_string():
     assert Bruch(5,6) == Operator('+').berechne(Bruch(1,2), Bruch(1,3))
     assert Bruch(1,6) == Operator('-').berechne(Bruch(1,2),  Bruch(1,3))
     assert Bruch(1,2) == Operator('*').berechne(Bruch(3,4),  Bruch(2,3))
-    assert Bruch(1,2) == Operator('/').berechne(Bruch(3,4),  Bruch(3,2))
+    assert Bruch(1,2) == Operator(':').berechne(Bruch(3,4),  Bruch(3,2))

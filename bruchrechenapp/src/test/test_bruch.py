@@ -1,5 +1,5 @@
 import pytest
-from bruchrechenapp.src.model.bruch import Bruch, ggT
+from bruchrechenapp.src.model.bruch import Bruch
 
 
 def test_constructor() -> None:
@@ -18,13 +18,6 @@ def test_constructor() -> None:
 def test_equals() -> None:
     assert Bruch(1,2) == Bruch(1,2)
     assert Bruch(1,2) != Bruch(2,4)
-
-def test_ggT() -> None:
-    assert 2 == ggT(2,4)
-    assert 13 == ggT(65, 143)
-    assert 1 == ggT(7,31)
-    assert 2 == ggT(-2,4)
-    assert 2 == ggT(2,-4)
 
 def test_kuerze() -> None:
     assert Bruch(1,2) == Bruch(6,12).kuerze()

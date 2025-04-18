@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass
-
+from math import gcd
 
 @dataclass(frozen=True)
 class Bruch():
@@ -16,7 +16,7 @@ class Bruch():
         object.__setattr__(self, "nenner", nenner * faktor)
 
     def kuerze(self) -> Bruch:
-        teiler = ggT(self.zaehler, self.nenner)
+        teiler = gcd(self.zaehler, self.nenner)
         return Bruch(self.zaehler // teiler, self.nenner // teiler)
 
     def inverses(self) -> Bruch:
@@ -36,11 +36,3 @@ class Bruch():
     
     def dividiere(self, b: Bruch) -> Bruch:
         return self.multipliziere(b.kehrwert())
-
-def ggT(a: int, b: int) -> int:
-    if b < 0: return ggT(a,-b)
-    while b != 0:
-        h = a % b
-        a = b
-        b = h
-    return a

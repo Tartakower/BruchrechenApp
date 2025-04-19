@@ -11,23 +11,23 @@ from bruchrechenapp.operator import Operator
 class BruchrechenApp(toga.App):
     def startup(self):
         
-        main_box = toga.Box(style=Pack(direction='column', align_items='center'))
+        main_box = toga.Box(style=Pack(direction='column', alignment='center'))
 
-        row_box = toga.Box(style=Pack(direction='row'), align_items='center', margin=10)
+        row_box = toga.Box(style=Pack(direction='row', alignment='center', padding=10))
 
         zaehler_1 = createTextInput()
         nenner_1 = createTextInput()
-        box_1 = toga.Box(style=Pack(direction='column'), align_items='center', margin=10)
+        box_1 = toga.Box(style=Pack(direction='column', padding=10))
         box_1.add(zaehler_1)
         box_1.add(nenner_1)
 
         auswahl = toga.Selection(items=['+','-','*',':'], style=Pack(font_size=16))
-        box_2 = toga.Box(style=Pack(direction='column', align_items='center', margin=10))
+        box_2 = toga.Box(style=Pack(direction='column', padding=10))
         box_2.add(auswahl)
 
         zaehler_2 = createTextInput()
         nenner_2 = createTextInput()
-        box_3 = toga.Box(style=Pack(direction='column'), align_items='center', margin=10)
+        box_3 = toga.Box(style=Pack(direction='column', padding=10))
         box_3.add(zaehler_2)
         box_3.add(nenner_2)
 
@@ -43,13 +43,13 @@ class BruchrechenApp(toga.App):
                 zaehler_res.value = '?'
                 nenner_res.value = '?'
 
-        rechnen_button = toga.Button("=", on_press=berechne, style=Pack(margin=5, font_size=16))
-        box_4 = toga.Box(style=Pack(direction='column'), align_items='center', margin=10)
+        rechnen_button = toga.Button("=", on_press=berechne, style=Pack(padding=5, font_size=16))
+        box_4 = toga.Box(style=Pack(direction='column', padding=10))
         box_4.add(rechnen_button)
 
         zaehler_res = createTextInput()
         nenner_res = createTextInput()
-        box_5 = toga.Box(style=Pack(direction='column'), align_items='center', margin=10)
+        box_5 = toga.Box(style=Pack(direction='column', padding=10))
         box_5.add(zaehler_res)
         box_5.add(nenner_res)
 
@@ -67,7 +67,7 @@ class BruchrechenApp(toga.App):
             zaehler_res.value = ''
             nenner_res.value = ''
 
-        clear_button = toga.Button("Neue Aufgabe", on_press=loesche, style=Pack(width=180, margin=5, font_size=16))
+        clear_button = toga.Button("Neue Aufgabe", on_press=loesche, style=Pack(width=180, padding=5, font_size=16))
 
         main_box.add(row_box)
         main_box.add(clear_button)
@@ -77,7 +77,7 @@ class BruchrechenApp(toga.App):
         self.main_window.show()
 
 def createTextInput() -> toga.TextInput:
-    return toga.TextInput(style=Pack(width=60, text_align="center", margin=5, font_size=16))
+    return toga.TextInput(style=Pack(width=60, text_align="center", padding=5, font_size=16))
 
 def main():
     return BruchrechenApp()

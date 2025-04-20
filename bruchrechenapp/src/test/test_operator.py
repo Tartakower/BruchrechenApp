@@ -1,5 +1,5 @@
 import pytest
-from bruchrechenapp.src.bruchrechenapp.operator import Operator
+from bruchrechenapp.src.bruchrechenapp.operation import Operator
 from bruchrechenapp.src.bruchrechenapp.bruch import Bruch
 
 def test_operator_plus():

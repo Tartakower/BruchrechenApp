@@ -6,7 +6,7 @@ import toga
 from toga.style.pack import Pack
 
 from bruchrechenapp.bruch import Bruch
-from bruchrechenapp.operator import Operator
+from bruchrechenapp.operation import Operator
 
 class BruchrechenApp(toga.App):
     def startup(self):
